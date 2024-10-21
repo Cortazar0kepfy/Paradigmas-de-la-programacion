@@ -1,5 +1,7 @@
 #================================================
 #Cortazar Tinajero luis Enrique.................
+#ESFM.LMA
+
 #======================================================
 #===================================================================================================================================================================================================
 
@@ -7,14 +9,18 @@
 
 
 
+'''Input permite obtener datos de usuario
+   en prompter'''
+#pip install prompter..............., para la instalación Pypi.
 nombre= input("dame tu nombre: ")
 print("hola como estas",nombre)
+#======================================================
 
-
-
+###########Los enteros son de precisiön ilimitada  '''yei (:'''
 y = 5000000000000000000000000000000000000000000000000000
 print(y)
-
+#=================================================
+#se pueden delimitar numeros con guión bajo pero no con coma (:
 y = 5_000_000
 print(y)
 

@@ -1,0 +1,70 @@
+#Cortázar Tinajero Luis Enrique
+
+#Uso de la terminal (unix)
+ls         ->(list) listado de archivos en el directorio....
+cd xxx  ->(change directory) cambio de directorio........
+
+       xxx = null te lleva a home.........
+       xxx = .. te regresa al directorio anterior
+       xxx = ../.. te regresa dos dirctorios anteriores
+mkdir x -> (make directory) crear la carpeta
+clear   -> Limpia la terminal..
+pwd     -> (present working directory) ruta en la que encuentras
+cp x y  ->(copy) copiar archivo x al y
+mv x y   ->(move) copiar y borrar archivo x al y
+rm xxx   (remove) borrar un archivo
+         xxx = *borra todo en el directorio
+         xxx = *.py borra todos los que terminan en .py
+         xxx = data* borra todos lo que termina en data.
+rm -r xxx       ->borra un directorio completo
+rmdir           ->borra un dirctorio vacio
+
+ps -ef           ->lista de procesos de una maquina
+kill -9 xxx -> (matar) matar proceso
+man xxx     ->manual de la instruccion xxx
+
+
+
+
+#instalar aplicaciones......
+sudo apt-get update      ->actualice la lista de programas a renovar
+sudo apt-get upgrade      ->baja los programas necesarios a actualizar
+sudo apt-get install xxx -> instalar aplicacion xxx
+
+
+#Instruccioned de vi........
+
+R               ->(replace) escribir y reemplazar
+i                ->(insert) escribir desplazando
+a                -> (añadir) escribir después de este lugar
+o                ->abrir renglón abajo
+O                ->abrir renglón arriba
+dd               ->borrar renglón
+D                ->borra lo que hay a partir de este punto hacia adelante
+/xxx             ->buscar xxx
+                    si hay varios n ->siguiente
+                                  N -> anterior
+x                ->borrar
+:x                -> me manda a la linea x
+                  x=S la última linea
+10(instrucción) -> repite la instrucción 10 veces
+u               -> (undo) deshacer lo anterior
+U               -> (redo) volver a hacer lo anterior
+.               -> repetir lo anterior
+:w              ->Graba el archivo(write)
+:wq             ->Graba y sale del archivo
+:q!              ->se sale y no graba
+
+Para recuperar un archivo .swp entrar con vi, poner R de recuperar
+y luego borrar el .____.swp, para visualizarlo se usa ls -la 
+
+
+#instrucciones de git......................
+
+git init 
+git config --global user.name "Francisco Vega"
+git config --global user.email "youremail@gmail.com
+git clone https://...
+git add .
+git commit -m "Mensaje sobre el código"
+git push

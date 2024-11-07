@@ -67,7 +67,7 @@ class Coche:
         mi.llanta3 = ll3
         mi.llanta4 = ll4
 
-micoche = Coche(llanta1,llanta2,llanta3,llanta4,llanta4)
+micoche = Coche(llanta1,llanta2,llanta3,llanta4)
 
 
 print("total de llantas:",Llanta.cuenta)
@@ -131,13 +131,13 @@ class Cuadrilatero:
         mi.lado4=d
 
     def perimetro(mi):
-        p=mi.lado1 + mi.lado2 + milado3 + mi.lado4
+        p=mi.lado1 + mi.lado2 + mi.lado3 + mi.lado4
         print("perimetro=",p)
         return p
 
 #Su hijo rectángulo
 #Rectángulo es hijo de cuádrilatero...........
-class Rectangulo(cuadrilatero):
+class Rectangulo(Cuadrilatero):
     def __init__(self, a, b):
 
 #Constructor de su madre...................................

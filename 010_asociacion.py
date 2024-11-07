@@ -1,11 +1,15 @@
   
 #Cortázar Tinajero Luis Enrique...........................
 #. #.
+
+
+
+
+
 class A:
-    def __init__(self, a: float, b: float, c: float):
-        self.a = a
-        self.b = b
-        self.c = c 
+    __a:float=0.0
+    __b:float=0.0
+    __c:float=0.0
 
     def __init__(self,a:float,b:float,c:float):
         self.a = a
@@ -16,12 +20,19 @@ class A:
 #==============================
 
 class B:
-    def __init__(self, d: float, e: float):
+    __d:float=0.0
+    __e:float=0.0
+
+    def __init__(self,d:float,e:float):
         self.d = d
         self.e = e
 
-    def sumar_todo(self, aa: float, bb: float) -> float:
-        x = self.d + self.e + aa + bb
+
+#===========<><>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#Método "sumar todo"(internos + externos)
+#=============================================================
+    def sumar_todo(self, aa:float, bb:float):
+        x:float=self.d+self.e+aa+bb
         return x
 
 
@@ -30,57 +41,58 @@ class B:
 #Asociación.............................><<<<<<<<<<<<<<<<<<<<<<<<>><>>>><>>>><<<>>
 #usando objetos independientes......................................
 #><><><<<<><><><><><>>
-# Asociación usando objetos independientes
-objetoA = A(1.0, 2.0, 3.0)
-objetoB = B(4.0, 5.0)
-print(objetoB.sumar_todo(objetoA.a, objetoA.b))
-
+objetoA = A(1.0,2.0,3.0)
+objetoB  B(4.0,5.0)
+print(objetoB.sumar_todo(objetoA.a,objetoA.b))
 
 
 #El objeto C tiene dos reales y un "objeto A"...........<><><><><><><><><><><><><<<<><><
 #El objeto A se instancia dentro de C.......................<><><><><><><><><><><><><><><><>
 #<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
 class C:
-    def __init__(self, d: float, e: float):
+    __d:float=0.0
+    __e:float=0.0
+    __Aa:A=None
+    
+    def __init__(self,d:float,e:float):
         self.d = d
         self.e = e
-        self.Aa = A(1.0, 2.0, 3.0)
+        #........<><><><>A está isntanciada..........................<>
+        #...................adentro...............................
+        self.Aa = A(1.0,2.0,3.0)
 
-    def sumar_todo(self) -> float:
-        x = self.d + self.e + self.Aa.a + self.Aa.b
-        return x
+    def __init__
 
 
+    def sumar_todo(self):
+        x:float=self.d+self.e+self.As.a+self.Aa.b
+        return x 
 
 
 
 #Composición.........................
 #contiene otro objeto dentro.........................
 
-objetoC = C(4.0, 5.0)
+objetoC = C(4.0,5.0)
 print(objetoC.sumar_todo())
 
 
 class D:
-    def __init__(self, d: float, e: float, Aa: A):
-        self.d = d
-        self.e = e
-        self.Aa = Aa
+    __d:float=0.0
+    __e:float=0.0
+    __Aa:A=None
 
-    def sumar_todo(self) -> float:
-        x = self.d + self.e + self.Aa.a + self.Aa.b
-        return x
+    def __init__(self,d:float,e:float,Aa:A):
+
 
 #Agregación.......
 #====================================================================
 #Construye el objeto agregrado
-
-
-  # Agregación
-objetoA = A(1.0, 2.0, 3.0)
-objetoD = D(4.0, 5.0, objetoA)
+objetoD = D(4.0,5.0,objetoA)
 print(objetoD.sumar_todo())
-  
+
+    
 
     
 

@@ -42,7 +42,7 @@ class B:
 #usando objetos independientes......................................
 #><><><<<<><><><><><>>
 objetoA = A(1.0,2.0,3.0)
-objetoB  B(4.0,5.0)
+objetoB = B(4.0,5.0)
 print(objetoB.sumar_todo(objetoA.a,objetoA.b))
 
 
@@ -62,7 +62,7 @@ class C:
         #...................adentro...............................
         self.Aa = A(1.0,2.0,3.0)
 
-    def __init__
+  
 
 
     def sumar_todo(self):

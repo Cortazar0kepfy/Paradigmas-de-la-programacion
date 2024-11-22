@@ -55,5 +55,6 @@ repositorioBaseDeDatos = BaseDeDatos("localhost", "admin", "admin123")
 
 
 ManejoDeInscripciones.inscribirUsuario(usuario,repositorioBaseDeDatos)
+print("\n")
 
 

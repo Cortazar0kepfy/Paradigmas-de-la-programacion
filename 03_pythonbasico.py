@@ -4,7 +4,7 @@ print(miprimeralista)
 
 
 
-mi primera lista = [1,"javier","1.34","bosco","angel","abagail", True]
+miprimeralista = [1,"javier","1.34","bosco","angel","abagail", True]
 print(miprimeralista)
 
 

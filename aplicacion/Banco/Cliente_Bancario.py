@@ -11,7 +11,7 @@
 
 class ClienteBancario:
     __nombres:str = None
-   __apellidos:str = None
+    __apellidos:str = None
     __edad:int = 0
     __balanceDeCuenta:float = 0.0
 

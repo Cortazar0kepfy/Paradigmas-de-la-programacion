@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #Cortázar Tinajero Luis Enrique...............()()(()()()()
 from aplicacion.repositorio.repositoriodeusuarios import RepositorioDeUsuarios
 from aplicacion.modelos.usuario import Usuario
@@ -7,17 +6,14 @@ from aplicacion.modelos.usuario import Usuario
 #Para llnear la interface hay que heredar la clase......
 
 
-=======
 from aplicacion.repositorio.repositoriodeusuarios import RepositorioDeUsuarios
 from aplicacion.modelos.usuario import Usuario
 
->>>>>>> 16fa11d117d16415552b245af6f814f46b1524fd
 class BaseDeDatos(RepositorioDeUsuarios):
     __host: str
     __user: str
     __password: str
 
-<<<<<<< HEAD
     def __init__(mi, host:str, user:str, password: str):
         mi.__host = host
         mi.__user =  user
@@ -33,7 +29,6 @@ class BaseDeDatos(RepositorioDeUsuarios):
                         "edad": usuario.getEdad() }
         print(f"Guardando el ususario en la base de datos {usuario.getNombre()}\n")
         print(f"INSERTAR DATOS DEL USUARIO ({'userElements['nombre']}','{userElements['apellido']}',{userElements['edad']})")
-=======
 
     def __init__(mi, host:str, user:str, password:str):
         mi.__host = host
@@ -53,14 +48,8 @@ class BaseDeDatos(RepositorioDeUsuarios):
 
 
 
->>>>>>> 16fa11d117d16415552b245af6f814f46b1524fd
 
 
     def cerrar(mi) -> None:
         print("Cerrando la conexión")
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 16fa11d117d16415552b245af6f814f46b1524fd
-        

@@ -1,3 +1,11 @@
+#Cortázar Tinajero Luis Enrique........()()()()()
+#Clase cCcCCCCCCcLIENTEBANCARIO............CcccccCCCCcccccc<<<<<<<<<<<<<<iiii
+
+
+
+
+
+
 #Cortázar Tinajero Luis Enrique ...........     #Clase cliente bancario..................
 #Perteneciente como segunda parte de" atrapar errores(number:12)
 # . - - - - - - - - - - -   - - - - - l- -   

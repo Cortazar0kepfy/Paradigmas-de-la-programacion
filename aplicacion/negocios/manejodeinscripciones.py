@@ -14,7 +14,7 @@ class ManaejoDeInscripciones:
     # El objeto ManejoDeInscripciones es la interface intercambiable....
     #@staticmethod................[][][][][][][][][][][[][][][][][][][]
     @staticmethod
-    def inscribirUsuario(usuario:Usuario, repositorioDeUsuarios: RepositoriosDeUsuarios ) -> None:
+    def inscribirUsuario(usuario:Usuario, repositorioDeUsuarios: RepositoriosDeUsuarios) -> None:
         print("--------Guardando Usuario-----------\n")
         repositoriosDeUsuarios.abrir()
         repositorioDeUsuarios.guardar(usuario)

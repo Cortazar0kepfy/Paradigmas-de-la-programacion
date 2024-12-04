@@ -18,7 +18,7 @@ def __init__(mi, nombre:str, apellido: str, edad: int):
 
 
 #getters...........()()()()()()()()()()()()()()()()()
-def getApellido(mi) -> str:
+def getNombre(mi) -> str:
     return mi.__nombre
 
 def getApellido (mi) -> str:

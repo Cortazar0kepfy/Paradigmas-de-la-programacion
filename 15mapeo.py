@@ -26,8 +26,8 @@ def mapeo(func, lista_numeros):
     return resultado
 
 
-cuadrados = mapeo(al cuadrado,[2,5,2,3.8,1.2,6.6,1j,7,8])
-cubos = mapeo(al cubo,[1,2,3,4,5,6,7,8])
+cuadrados = mapeo(alcuadrado,[2,5,2,3.8,1.2,6.6,1j,7,8])
+cubos = mapeo(alcubo,[1,2,3,4,5,6,7,8])
 print(cuadrados)
 print(cubos)
 
@@ -49,8 +49,8 @@ def saludar(func):
 
 
 #Con strings()()()()()()()()()()()()(
-saludar(en_mayusculas)
-saludar(en_minusculas)
+saludar(en_mayuscula)
+saludar(en_minuscula)
 
 #Funciones abstractas dentro de funciones...................()
 # . . . .                     .        .      .              .

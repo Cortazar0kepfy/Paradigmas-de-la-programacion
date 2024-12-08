@@ -37,7 +37,7 @@ except Exception as ex:
 #####Forma correcta
 
 
-print("cliente."nombres")
+print(cliente.nombres)
 
 
 

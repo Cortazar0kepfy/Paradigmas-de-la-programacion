@@ -121,7 +121,7 @@ cosas={("Parker","Reynolds","Camlin"):"pluma", ("LG","Samsung","Whirpool"):"refr
 
 
 #llave string valor int
-romanos = {'I':1,'II':2,'III':3,:4,'V':5,"VI":6,"VII":7}
+romanos = {'I':1,'II':2,'III':3,'IV':4,5:'V'}
 print(romanos)
 print(romanos["I"])
 
@@ -137,7 +137,7 @@ for k in capitales:
 
 
 
-#Nuevo dato para el diccionario..........................................
+#Nuevo dato para el diccionario..........................................:
 
 capitales["Mexico"] = "CDMX"
 print(capitales)

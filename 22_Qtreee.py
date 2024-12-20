@@ -40,11 +40,12 @@ class Nodo():
     def get_particulas(self):
         return self.particulas
 
-def subdivision_recursica(nodo:Nodo, k:int):
+def subdivision_recursiva(nodo:Nodo, k:int):
     if len(nodo.particulas)<=k:
+        return
 
     w_ = float(0.5*nodo.ancho)
-    h: = float(0.5*nod.alto)
+    h_ = float(0.5*nod.alto)
 
     p = cuantas_contiene(nodo.x0, nodo.y0, w_, h_, nodo.particulas)
     nodo.x1 = Nodo(nodo.x0, nodo.y0, w_, h_, p)
@@ -56,7 +57,7 @@ def subdivision_recursica(nodo:Nodo, k:int):
     subdivision_recursiva(nodo.x2, k)
 
 
-    p = cuantas_contiene(nodo.x0+w_, nodo.y0 w_, h_, nodo.particulas)
+    p = cuantas_contiene(nodo.x0+w_, nodo.y0,w_, h_, nodo.particulas)
     nodo.x3 = Nodo(nodo.x0 + w_, nodo.y0, w_, h_, p)
     subdivision_recursiva(nodo.x3, k)
 
@@ -69,7 +70,7 @@ def subdivision_recursica(nodo:Nodo, k:int):
 #Función para incluir particulas en una caja
 def cuantas_contiene(x:float, y:float, w:float, h:float, particulas):
     pts = []
-    for particulas i particulas:
+    for particula in particulas:
         if particula.x >= x and particula.x <= x+w and particula.y>=y and particula.y<=y+h:
             pts.append(particula)
 
@@ -84,7 +85,8 @@ def encontrar_hijos(nodo):
     else:
         hijos = []
         for hijo in nodo.hijos:
-            hijos += (encotrar_hijos(hijo)
+            hijos += (encontrar_hijos(hijo))
+
 
     return hijos
 
@@ -98,13 +100,13 @@ def encontrar_hijos(nodo):
 class QTree():
     def __init__(self, k:int, n:int):
         self.umbral = k
-        self.particulas = [Particula(random.uniform(0,10), random.uniform(0,10) for x in range(n)]
+        self.particulas = [Particula(random.uniform(0,10), random.uniform(0, 10)) for x in range (n)]
         self.root = Nodo(0, 0, 10, 10, self.particulas)      
 
-    def add_particular(self, x:float, y:float):
+    def add_particula(self, x:float, y:float):
         self.particulas.append(Particula(x, y))
 
-    def get particulas(self):
+    def get_particulas(self):
         return self.particulas
     
 
@@ -119,7 +121,7 @@ class QTree():
         print("Número de segmentos: %d" %len(c))
         areas = set()
         for n in c:
-            plt.gcf().gca().add_patch(pathces.Rectangle(n.x0, n.y0), n.ancho, n.alto, fill=False))
+            plt.gcf().gca().add_patch(patches.Rectangle((n.x0,n.y0), n.ancho, n.alto, fill=False))
 
         x = [particula.x for particula in self.particulas]
 
@@ -134,10 +136,10 @@ class QTree():
 # Programa principal
 
 
-qtree = QTree(5,100)
+qtree = QTree(5,1000)
 qtree.subdividir()
 qtree.visualizacion()
-
+#################################################
 
 
 

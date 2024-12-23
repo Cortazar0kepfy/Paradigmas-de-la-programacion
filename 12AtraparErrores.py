@@ -7,8 +7,12 @@
 from aplicacion.banco.cliente_bancario import ClienteBancario
 
 
+#Try :intenta (correr las instrucciones)
+#except: atrapar el error en una variable e
+# se puede convertir a string
 
-
+#Error por sacar más dinero del que tiene....
+# : : :    :     :       :      :   :  : : : :  :  :  :  .:  : 
 try:
     cliente = ClienteBancario("Jaime Lozano", "La Fonseca",28, 0.0)
     cliente.guardarDinero(300)

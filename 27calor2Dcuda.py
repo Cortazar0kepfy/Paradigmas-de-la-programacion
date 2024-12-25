@@ -51,7 +51,7 @@ evolucion_gpu = cuda.jit(devive=True)(evolucion)
 def solucion_kernel(u_d,un_d,udx2_0,udx2_1,dt,n_0,n_1,kd):
     ii, jj = cuda.grid(2)
     i = ii + n_0*jj
-    if ii==0 or jj==0 ir ii==n_0-1 or jj==n_1-1:
+    if ii==0 or jj==0 or ii==n_0-1 or jj==n_1-1:
         unueva = 0.0   
     else:
         unueva = evolucion_gpu(u_d,n_0,n_1,udx2_0,udx2_1,dt,kd,i)

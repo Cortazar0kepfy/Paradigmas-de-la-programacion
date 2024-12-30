@@ -4,26 +4,19 @@
 
 #Modulo de estadística.........
 
-import statics
 
+import statistics
 
-bigdata = [1,3,2.7,0.8,4.3,-0.1]
+bigdata = [1, 3, 2.7, 0.8, 4.3, -0.1]
 promedio = statistics.mean(bigdata)
-print(promedio)
+print("Promedio:", promedio)
 
+# Hazme una lista de elementos que cumplan la condición x > promedio
+print(list(filter(lambda x: x > promedio, bigdata)))
 
-#Hazme una lista de elementos que cumplan la condición x > promedio
-#  filter(condición, datos )
+# Limpiar los datos
+paises = {"", "Argentina", "", "Brasil", "", "Chile", "", "México", "", "Cuba", "", "Venezuela"}
 
-print(list(filter)lambda x: x > promedio, bigdata)))
-
-
-#Limpiar los datos.......()()()
-
-paises = {"", "Argentina", "", "Brasil", "","Chile", "","México", "","Cuba", "", "Venezuela"]
-
-
-#Filtra lo que no contiene nada
-#   :    :          :        :  ________________ :
-
+# Filtra lo que no contiene nada
 print(list(filter(None, paises)))
+

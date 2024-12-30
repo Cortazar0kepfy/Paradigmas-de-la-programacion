@@ -1,102 +1,58 @@
 #Cortazar Tinajero Luis Enrique...
 
-# Tres listas.........///////////////
+# Tres listas.........//////////////
 
 
-mi_lista = [1,2,3]
-tu_lista = (10,20,30)
-su_lista = (40,50,100)
+import statistics
 
+bigdata = [1, 3, 2.7, 0.8, 4.3, -0.1]
+promedio = statistics.mean(bigdata)
+print("Promedio:", promedio)
 
-#función multiplicar*2
+# Crear una lista de elementos que cumplen la condición x > promedio
+print(list(filter(lambda x: x > promedio, bigdata)))
 
+# Limpiar los datos
+paises = {"", "Argentina", "", "Brasil", "", "Chile", "", "México", "", "Cuba", "", "Venezuela"}
 
+# Filtra lo que no contiene nada
+print(list(filter(None, paises)))
+
+# Tres listas
+mi_lista = [1, 2, 3]
+tu_lista = [10, 20, 30]
+su_lista = [40, 50, 100]
+
+# Función multiplicar por 2
 def multiplicar_por2(elemento):
-    return elemento*2
+    return elemento * 2
 
-
-
-#función que filtra pares.......()()()()()((
-
+# Función que filtra impares
 def solo_impar(elemento):
-    return elemento % 2 !=0
+    return elemento % 2 != 0
 
-# .       . lista de pares de datos de las dos listas...<>>>>
-# . .         .zip sirve para jugar listas....
-# - . . . . . . . . . . . 
-#   list es para que la haga toda lista........
+# Lista de pares de datos de las tres listas
+print(list(zip(mi_lista, tu_lista, su_lista)))
 
-
-
-
-print(list(zip("a", "b", "c", "b", "d", "m", "n")))
-
-
-
+# Crear conjunto de elementos que se repiten
 una_lista = ["a", "b", "c", "b", "d", "n", "n", "n"]
-
-
-
-#Crear conjunto de elementos que se repiten....()()()
-
-duplicados = set[x for in una_lista if una_lista.count(x) > 1]
+duplicados = set(x for x in una_lista if una_lista.count(x) > 1)
 print(duplicados)
-#     # .   ."!"
 
-#Expresión generadora.....
-# Contiene un iterador
-# !!!!00000_Contiene un iterador   ."
-#Range(5) es un iterador de 0 a 4.............
-cuadrados = (x*x for x in range(5))
+# Expresión generadora
+cuadrados = (x * x for x in range(5))
 
-
-
-#Next llama a la siguiente evaluación del iterador
-
-
+# Next llama a la siguiente evaluación del iterador
 print(next(cuadrados))
 print(next(cuadrados))
 print(next(cuadrados))
 print(next(cuadrados))
 print(next(cuadrados))
-                            
-#Pasar una función generadora........
-import math
 
+# Suma de elementos del iterador
+print(sum(x * x for x in range(5)))
 
-# suma de elementos del iterador
-print(sum(x*x for in range(5)))
-
-#Lista de comprehensión pasada como función
-#   .       Arma la lista por usar[]
-numeros_pares = [x for in range(21) if x%2 == 0]
-print([x for x in range(21) if x%2 == 0])
+# Lista de comprensión pasada como función
+numeros_pares = [x for x in range(21) if x % 2 == 0]
 print(numeros_pares)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

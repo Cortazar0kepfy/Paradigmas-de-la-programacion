@@ -29,7 +29,8 @@ def solo_impar(elemento):
 
 
 
-print(list(zip("a", "b", "c", "b", "d", "m", "n")
+print(list(zip("a", "b", "c", "b", "d", "m", "n")))
+
 
 
 una_lista = ["a", "b", "c", "b", "d", "n", "n", "n"]
@@ -38,7 +39,7 @@ una_lista = ["a", "b", "c", "b", "d", "n", "n", "n"]
 
 #Crear conjunto de elementos que se repiten....()()()
 
-duplicados = set[x for in una_lista if una_lista.count(x) > 1])
+duplicados = set[x for in una_lista if una_lista.count(x) > 1]
 print(duplicados)
 #     # .   ."!"
 

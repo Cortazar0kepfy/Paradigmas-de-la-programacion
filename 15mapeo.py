@@ -81,7 +81,7 @@ print(division(3))
 #Lista de ciudades y su temperatura
 
 
-temps =[("Berlin", 8), ("Cairo", 14), ("Buenos Aires", 22), ("Los Angeles", 17), ("Tokyo", 18), ("Nueva York", 8) ("Londres",2), ("Pekin", 32), ("México Tenochtitlan", 21)]
+temps =[("Berlin", 8), ("Cairo", 14), ("Buenos Aires", 22), ("Los Angeles", 17), ("Tokyo", 18), ("Nueva York", 8),("Londres",2), ("Pekin", 32), ("México Tenochtitlan", 21)]
 
 
 

@@ -73,7 +73,7 @@ def nfibonacci(n):
         return 1
     elif n==2:
         return 1
-    elif n>2;
+    elif n>2:
     return nfibonacci(n-1) + nfibonacci(n-2)
 
 for i in range(1,10000)

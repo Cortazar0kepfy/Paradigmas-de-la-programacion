@@ -29,7 +29,6 @@ def calcularpi_kernel(rng_states, iteraciones, out):
         if x**2 + y**2 <= 1.0:
             cae_adentro += 1
 
-    """Escribir resultado para proceso ii"""
     out[ii] = 4.0 * cae_adentro / iteraciones
 
 #================    

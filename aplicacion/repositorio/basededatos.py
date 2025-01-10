@@ -28,7 +28,8 @@ class BaseDeDatos(RepositorioDeUsuarios):
                         "apellido": usuario.getApellido(), 
                         "edad": usuario.getEdad() }
         print(f"Guardando el ususario en la base de datos {usuario.getNombre()}\n")
-        print(f"INSERTAR DATOS DEL USUARIO ({'userElements['nombre']}','{userElements['apellido']}',{userElements['edad']})")
+        print(f"INSERTAR DATOS DEL USUARIO ('{userElements['nombre']}','{userElements['apellido']}','{userElements['apellido']})")
+
 
     def __init__(mi, host:str, user:str, password:str):
         mi.__host = host
@@ -43,7 +44,7 @@ class BaseDeDatos(RepositorioDeUsuarios):
         userElements = { "nombre": usuario.getNombre(),
                          "apellido": usuario.getApellido(),
                          "edad":usuario.getEdad() }
-        print(f"Guardando el usuario en la base de datos {ususario.getNombre()}\n")
+        print(f"Guardando el usuario en la base de datos {usuario.getNombre()}\n")
         print(f"Insertar datos del usuario ( '{userElements['nombre']}'.'{userElements['apellido']}.{userElements['edad']})")
 
 

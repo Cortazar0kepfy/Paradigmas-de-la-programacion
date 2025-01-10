@@ -1,5 +1,6 @@
 #Cortázar Tinajero Luis Enrique.............()()()(()()()()()()())(
 from aplicacion.modelos.usuario import Usuario
+from aplicacion.repositorio.repositoriodeusuarios import RepositorioDeUsuarios
 
 
 
@@ -7,16 +8,16 @@ from aplicacion.modelos.usuario import Usuario
 #Desarrollo de la clase manejodeinscripciones.......
 #No tiene variables!!!!!!!!!!!!!!!
 
-class ManaejoDeInscripciones:
+class ManejoDeInscripciones:
     #Decorador staticmethod
     #El objeto solo tiene la función inscribirUsuario
     #Envuelve la función sin llamar variables locales..............
     # El objeto ManejoDeInscripciones es la interface intercambiable....
     #@staticmethod................[][][][][][][][][][][[][][][][][][][]
     @staticmethod
-    def inscribirUsuario(usuario:Usuario, repositorioDeUsuarios: RepositoriosDeUsuarios) -> None:
+    def inscribirUsuario(usuario:Usuario, repositorioDeUsuarios:RepositorioDeUsuarios) -> None:
         print("--------Guardando Usuario-----------\n")
-        repositoriosDeUsuarios.abrir()
+        repositorioDeUsuarios.abrir()
         repositorioDeUsuarios.guardar(usuario)
         repositorioDeUsuarios.cerrar()
         

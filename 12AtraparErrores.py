@@ -14,7 +14,7 @@ from aplicacion.banco.cliente_bancario import ClienteBancario
 #Error por sacar más dinero del que tiene....
 # : : :    :     :       :      :   :  : : : :  :  :  :  .:  : 
 try:
-    cliente = ClienteBancario("Jaime Lozano", "La Fonseca",28, 0.0)
+    cliente = ClienteBancario("Jaime Lozano", "La Mañaeca", 28, 0.0)
     cliente.guardarDinero(300)
     print(cliente.imprimirInfo())
     cliente.retirarDinero(400)

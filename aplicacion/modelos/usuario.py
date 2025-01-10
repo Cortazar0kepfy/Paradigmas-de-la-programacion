@@ -15,12 +15,12 @@ class Usuario:
 # ## # ##getters
 
 
-        def getNombre)mi) ->str:
+    def getNombre(mi) ->str:
             return mi.__nombre
 
 
-        def getApellido(mi) ->str:
+    def getApellido(mi) ->str:
             return mi.__apellido
 
-        def getEdad(mi) ->str:
+    def getEdad(mi) ->str:
             return mi.__edad

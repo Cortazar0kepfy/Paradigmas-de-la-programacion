@@ -145,7 +145,7 @@ print(capitales)
 
 #borrar dato del diccionario
 del capitales["Mexico"]
-print(Capitales)
+print(capitales)
 
 
 #borrar todo del diccionario...................

@@ -14,7 +14,7 @@ from numba import *
 
 n= np.array([512,512],dtype=np.int64)
 #Tamaño del dominio (menor que uno)
-L = np.array([1.0,1.0],dytpe=np.float64)
+L = np.array([1.0,1.0],dtype=np.float64)
 #Constante de difusión
 kd:float64 = 0.2
 #pasos de tiempo
@@ -72,7 +72,7 @@ start = time.time()
 u = np.zeros(nt,dtype=np.float64)
 un = np.zeros(nt,dtype=np.float64)
 #Pasar arreglos al GPU
-u_d = cuda.to_devive(u)
+u_d = cuda.to_device(u)
 un_d = cuda.to_device(un)
 
 #Integrar en el tiempo

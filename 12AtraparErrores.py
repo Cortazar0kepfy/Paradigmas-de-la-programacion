@@ -1,47 +1,29 @@
-#Cortázar Tinajero Luis Enrique ::}
-
-
-
+#Cortázar Tinajero Luis Enrique
 
 
 from aplicacion.banco.cliente_bancario import ClienteBancario
 
+# Asegúrate de que cliente esté definido antes de los bloques try-except
+cliente = None
 
-#Try :intenta (correr las instrucciones)
-#except: atrapar el error en una variable e
-# se puede convertir a string
-
-#Error por sacar más dinero del que tiene....
-# : : :    :     :       :      :   :  : : : :  :  :  :  .:  : 
 try:
     cliente = ClienteBancario("Jaime Lozano", "La Mañaeca", 28, 0.0)
     cliente.guardarDinero(300)
     print(cliente.imprimirInfo())
     cliente.retirarDinero(400)
     print(cliente.imprimirInfo())
-
-
-
-#Exception es el objeto mas general de error
-
-
 except Exception as e:
     print("Error: " + str(e))
 
-
-#Error por usar un atributo privado.....
-
-
+# Este bloque try-except captura cualquier error al intentar acceder a __nombres
 try:
     print(cliente.__nombres) 
 except Exception as ex:
     print("Error: " + str(ex))
 
-
-#####Forma correcta
-
-
-print(cliente.nombres)
-
-
+# Forma correcta de acceder a nombres
+if cliente is not None:
+    print(cliente.nombres)
+else:
+    print("Error: cliente no está definido.")
 

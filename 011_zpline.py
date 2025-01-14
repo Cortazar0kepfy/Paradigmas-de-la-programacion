@@ -24,7 +24,7 @@ dim:np.int32 = 2
 
 puntos = np.zeros(dim*nump,dtype=np.float64)
 #          Parametrización. . . . . .  . . . . . . . .. . .  . 
-X =np.linspace(0.0*np.pi,nump+1)     ## Generar valores equidistantes entre 0 y 2π.
+X =np.linspace(0.0,2.0*np.pi,nump+1)     ## Generar valores equidistantes entre 0 y 2π.
 #Genera nump + 1 puntos equidistantes en el intervalo [0,2π][0, 2\pi]. 
 #Matemáticamente, esto significa que se esta dividiendo el intervalo:
 # [0,2π][0, 2\pi]en partes iguales.

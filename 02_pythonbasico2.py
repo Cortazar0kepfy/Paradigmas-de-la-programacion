@@ -26,7 +26,8 @@ print(y)
 
 
 
-numero = int(input("dame tu edad: "))
+numero = int(input("dame tu edad hermano: "))
+
 type(numero)
 
 

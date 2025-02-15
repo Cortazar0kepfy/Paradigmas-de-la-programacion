@@ -4,13 +4,13 @@
 #=================================
 #  Matemática Algorítmica
 #  Paradigmas de Programación
-#  ESFM IPN Diciembre 2024
-#=================================
+#  ESFM IPN Diciembre 2024 
+
 import ray
 ray.init()
 
 #==========
-#  Función 
+#  Función
 #==========
 @ray.remote
 def f(x):
@@ -35,18 +35,17 @@ class Contador(object):
 #=====================
 if __name__ == "__main__":
   #=============================================
-  #  Correr una función en paralelo-distribuído
+  #  Correr una función en paralelo-distribuido
   #=============================================
   resultados = [f.remote(i) for i in range(16)]
   print("Resultado (funciones) = ", ray.get(resultados)) # resultado = [0, 1, 4, 9, ...]
 
   #========================================================
-  #  Instanciar múltiples objetos en paralelo-distribuído
+  #  Instanciar múltiples objetos en paralelo-distribuido
   #========================================================
   contadores = [Contador.remote() for i in range(16)]
   for i in range(100):
     [c.incremento.remote() for c in contadores]
   resultados = [c.leer.remote() for c in contadores]
-  print("Resultado (objetos) = ", ray.get(resultados)) # resultado = [1, 1, 1, 1, ...]
-
+  print("Resultado (objetos) = ", ray.get(resultados)) # resultado = [100, 100, 100, 100, ...]
 

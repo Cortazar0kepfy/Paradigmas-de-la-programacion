@@ -49,7 +49,7 @@ def hoja(x,y):
 
                                          
         rtuga.forward(i)
-tortuga.left(angulo)
+tortugangulo)
 arbol(3.0 * i / 4.25, angulo)
 tortuga.right(2 * angulo)
 arbol(3.0 * i / 4.25, angulo)

@@ -93,6 +93,7 @@ print("Tardo: ",end-start,"s")
 
 u = np.reshape(u,(n[0],n[1]))
 x,y = np.meshgrid(np.arange(0,L[0],dx[0]),np.arange(0,L[1],dx[1]))
+fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
 ax.plot_surface(x,y,u,cmap=cm.hsv)
 plt.show()
 

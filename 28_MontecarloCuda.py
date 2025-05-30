@@ -8,7 +8,7 @@ ESFFM
 
 from numba import cuda
 from numba.cuda.random import create_xoroshiro128p_states
-from numba.cuda.random import xoroshiro128_uniform_float64
+from numba.cuda.random import xoroshiro128p_uniform_float64
 import numpy as np
 import random
 
@@ -50,8 +50,12 @@ rng_states = create_xoroshiro128p_states(hilosporbloque * bloques, seed)
 
 """Arreglos de salida (escritura)"""
 out = np.zeros(hilosporbloque * bloques, dtype=np.float64)
+out_d = cuda.to_device(out)
 
 # Correr en paralelo el kernel de cuda
-calcularpi_kernel[bloques, hilosporbloque](rng_states, 100000, out)
+iterar = 10000
+calcularpi_kernel[bloques, hilosporbloque](rng_states, iterar, out_d)
+out_d.copy_to_host(out)
+print('Muestras totales = ', iterar*N)
 print('pi:', out.mean())
 
